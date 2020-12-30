@@ -15,6 +15,19 @@ elif [[ "${INFO_TITLE}" ]]; then
   OUT_TEXT="${INFO_TITLE}"
 fi
 
+#------------------------#
+# play/stop with mouse
+# buttons and selection
+# with scroll wheel
+#------------------------#
+case $BLOCK_BUTTON in
+				1) cmus-remote --play  ;;
+				2) cmus-remote --stop ;;
+				#3) cmus-remote --pause ;;
+				4) cmus-remote --next ;;
+				5) cmus-remote --prev ;;
+esac
+
 echo "${OUT_TEXT}"
 echo "${OUT_TEXT}"
 exit
